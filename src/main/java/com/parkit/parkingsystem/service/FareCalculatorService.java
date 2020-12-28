@@ -29,5 +29,8 @@ public class FareCalculatorService {
             }
             default: throw new IllegalArgumentException("Unkown Parking Type");
         }
+        if (durationMn < 30) {
+            ticket.setPrice(0);
+        }
     }
 }

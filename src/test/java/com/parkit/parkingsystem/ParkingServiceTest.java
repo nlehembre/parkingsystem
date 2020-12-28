@@ -58,4 +58,12 @@ public class ParkingServiceTest {
         verify(parkingSpotDAO, Mockito.times(1)).updateParking(any(ParkingSpot.class));
     }
 
+    @Test
+    public void processExitingVehicleNotEnteredTest(){
+        //TODO: ticket must be null   beforeeach not good for this test
+
+        parkingService.processExitingVehicle();
+        verify(parkingSpotDAO, Mockito.times(1)).updateParking(any(ParkingSpot.class));
+    }
+
 }
